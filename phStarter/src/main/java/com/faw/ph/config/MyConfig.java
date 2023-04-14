@@ -1,6 +1,7 @@
 package com.faw.ph.config;
 
 import com.faw.ph.starter.StarterBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
  * @create 2023/4/13 19:26
  */
 @Configuration
+@ConditionalOnBean(ConfigMarker.class)
 public class MyConfig {
 
     static {
